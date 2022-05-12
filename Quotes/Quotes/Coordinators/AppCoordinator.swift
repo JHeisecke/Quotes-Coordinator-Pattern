@@ -21,9 +21,7 @@ class AppCoordinator {
     }
     
     func showQuotes() {
-        guard let quotesViewController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "QuotesViewController") as? QuotesViewController else {
-            fatalError("Unable to Instantiate Quotes View Controller")
-        }
+        let quotesViewController = QuotesViewController.instantiate()
         navigationController.pushViewController(quotesViewController, animated: true)
     }
 }

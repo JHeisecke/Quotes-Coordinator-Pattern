@@ -8,16 +8,9 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-
-    // MARK: - Type Properties
-    
-    static var storyboardIdentifier: String {
-        return String(describing: self)
-    }
+class SettingsViewController: UIViewController, Storyboardable {
     
     // MARK: - Properties
-    
     @IBOutlet var fontSizeSlider: UISlider! {
         didSet {
             // Configure Font Size Slider
